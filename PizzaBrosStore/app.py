@@ -15,3 +15,29 @@ PRODUCT_FILE = os.path.join(
 
 
 cart = []
+
+
+
+def load_products():
+
+    try:
+
+        with open(PRODUCT_FILE, "r") as file:
+            return json.load(file)
+
+    except FileNotFoundError:
+
+        print("products.json not found")
+        return []
+
+
+
+def save_products(products):
+
+    with open(PRODUCT_FILE, "w") as file:
+
+        json.dump(
+            products,
+            file,
+            indent=4
+        )
