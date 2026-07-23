@@ -3,4 +3,12 @@
         "id": 1,
         "name": "Pepperoni Pizza",
         "category": "Classic Pizza",
-        "price": 18,
+        "price": 18
+    },
+    {
+        "id": 2,
+        "name": "Margharita Pizza",
+        "category": "Classic Pizza",
+        "price": 14
+    }
+}
