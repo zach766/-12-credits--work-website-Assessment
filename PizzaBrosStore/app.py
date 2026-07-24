@@ -56,7 +56,6 @@ def calculate_total(items):
 
 
 
-
 @app.route("/")
 def home():
 
