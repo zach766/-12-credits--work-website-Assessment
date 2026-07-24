@@ -41,3 +41,28 @@ def save_products(products):
             file,
             indent=4
         )
+
+
+
+def calculate_total(items):
+
+    total = 0
+
+    for item in items:
+
+        total += item["price"] * item["quantity"]
+
+    return total
+
+
+
+
+@app.route("/")
+def home():
+
+    products = load_products()
+
+    return render_template(
+        "index.html",
+        products=products
+    )
