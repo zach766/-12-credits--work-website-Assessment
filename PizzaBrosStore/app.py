@@ -65,3 +65,21 @@ def home():
         "index.html",
         products=products
     )
+
+
+
+@app.route("/products")
+def products_page():
+
+    products = load_products()
+
+    return render_template(
+        "products.html",
+        products=products
+    )
+
+
+
+
+@app.route("/add/<int:product_id>")
+def add_to_cart(product_id):
