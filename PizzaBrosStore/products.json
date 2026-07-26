@@ -4,3 +4,35 @@
         "name": "Pepperoni Pizza",
         "category": "Classic Pizza",
         "price": 18,
+        "stock": 9,
+        "description": "Pepperoni with mozzarella cheese and tomato sauce.",
+        "image": "pepperoni.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Hawaiian Pizza",
+        "category": "Classic Pizza",
+        "price": 20,
+        "stock": 0,
+        "description": "Ham and pineapple with melted cheese.",
+        "image": "hawaiian.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Meat Lovers Pizza",
+        "category": "Special Pizza",
+        "price": 25,
+        "stock": 4,
+        "description": "Loaded with different types of meat.",
+        "image": "meat.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Cheese Pizza",
+        "category": "Vegetarian",
+        "price": 15,
+        "stock": 10,
+        "description": "Classic cheese pizza with tomato sauce.",
+        "image": "cheese.jpg"
+    }
+]
