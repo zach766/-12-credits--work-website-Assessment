@@ -51,3 +51,56 @@ Cart
 
 
 <section>
+
+
+
+<h2 class="section-title">
+
+Our Pizza Menu
+
+</h2>
+
+
+
+
+<div class="product-container">
+
+
+
+{% for product in products %}
+
+
+
+<div class="product-card">
+
+
+
+<h3>
+
+{{ product.name }}
+
+</h3>
+
+
+
+<p>
+
+Category: {{ product.category }}
+
+</p>
+
+
+<p>
+Price: ${{ product.price }}
+</p>
+
+<p>
+Stock Available: {{ product.stock }}
+</p>
+
+
+<button onclick="showDetails('{{ product.id }}')">
+
+View Details
+
+</button>
