@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+PizzaBros Cart
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+PizzaBrosStore
+</h1>
+
+
+<nav>
+
+<a href="/">Home</a>
+
+<a href="/products">Menu</a>
+
+<a href="/cart">Cart</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="cart-section">
+
+
+<h2>
+Your Order
+</h2>
+
+
+
+{% if cart %}
+
+
+
+{% for item in cart %}
+
+
+
+<div class="cart-item">
+
+
+<div>
+
+
+<h3>
+{{ item.name }}
+</h3>

@@ -119,3 +119,54 @@ def add_to_cart(product_id):
 
 
 
+
+
+                # If new item add quantity
+
+                if not found:
+
+                    new_item = product.copy()
+
+                    new_item["quantity"] = 1
+
+                    cart.append(new_item)
+
+
+
+                # decrease stock
+
+                product["stock"] -= 1
+
+
+                save_products(products)
+
+
+
+            break
+
+
+
+    return redirect(
+        url_for("view_cart")
+    )
+
+
+
+
+
+@app.route("/cart")
+def view_cart():
+
+    total = calculate_total(cart)
+
+
+    return render_template(
+        "cart.html",
+        cart=cart,
+        total=total
+    )
+
+
+
+
+
