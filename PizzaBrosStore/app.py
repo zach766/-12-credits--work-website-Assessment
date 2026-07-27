@@ -170,3 +170,46 @@ def view_cart():
 
 
 
+
+
+
+@app.route("/remove/<int:index>")
+def remove_from_cart(index):
+
+    if index < len(cart):
+
+
+        removed_item = cart[index]
+
+
+        products = load_products()
+
+
+        for product in products:
+
+
+            if product["id"] == removed_item["id"]:
+
+
+                # return all quantity back to stock
+
+                product["stock"] += removed_item["quantity"]
+
+                break
+
+
+
+        save_products(products)
+
+
+        cart.pop(index)
+
+
+
+    return redirect(
+        url_for("view_cart")
+    )
+
+
+
+
