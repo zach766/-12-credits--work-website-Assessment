@@ -56,6 +56,7 @@ def calculate_total(items):
 
 
 
+
 @app.route("/")
 def home():
 
@@ -65,6 +66,9 @@ def home():
         "index.html",
         products=products
     )
+
+
+
 
 
 
@@ -83,3 +87,35 @@ def products_page():
 
 @app.route("/add/<int:product_id>")
 def add_to_cart(product_id):
+
+    products = load_products()
+
+
+    for product in products:
+
+
+        if product["id"] == product_id:
+
+
+            # Check stock
+
+            if product["stock"] > 0:
+
+
+                found = False
+
+
+                # If already in cart increase quantity
+
+                for item in cart:
+
+                    if item["id"] == product_id:
+
+                        item["quantity"] += 1
+
+                        found = True
+
+                        break
+
+
+
