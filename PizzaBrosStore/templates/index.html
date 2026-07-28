@@ -79,3 +79,79 @@ Order Now
 
 
 <h2 class="section-title">
+
+Featured Pizzas
+
+</h2>
+
+
+
+<div class="product-container">
+
+
+
+{% for product in products %}
+
+
+
+<div class="product-card">
+
+
+<h3>
+
+{{ product.name }}
+
+</h3>
+
+
+
+<p>
+
+{{ product.category }}
+
+</p>
+
+
+
+<p>
+
+{{ product.description }}
+
+</p>
+
+
+
+<h2>
+
+${{ product.price }}
+
+</h2>
+
+
+
+
+<a href="/add/{{ product.id }}">
+
+<button>
+
+Add To Cart
+
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+
+</section>
