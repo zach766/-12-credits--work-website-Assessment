@@ -104,3 +104,105 @@ Stock Available: {{ product.stock }}
 View Details
 
 </button>
+
+
+
+
+{% if product.stock > 0 %}
+
+<a href="/add/{{ product.id }}">
+
+<button>
+Add To Cart
+</button>
+
+</a>
+
+{% else %}
+
+<button disabled>
+Out Of Stock
+</button>
+
+{% endif %}
+
+
+
+
+<div id="details-{{ product.id }}" class="product-details">
+
+
+
+<p>
+
+{{ product.description }}
+
+</p>
+
+
+
+<button onclick="hideDetails('{{ product.id }}')">
+
+Close
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+{% endfor %}
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+function showDetails(id) {
+
+
+document.getElementById("details-" + id)
+.style.display = "block";
+
+
+}
+
+
+
+function hideDetails(id) {
+
+
+document.getElementById("details-" + id)
+.style.display = "none";
+
+
+}
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
