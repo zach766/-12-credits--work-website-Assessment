@@ -213,3 +213,77 @@ def remove_from_cart(index):
 
 
 
+
+@app.route("/cancel")
+def cancel_order():
+
+
+    products = load_products()
+
+
+    # Return stock when cancelling
+
+    for cart_item in cart:
+
+
+        for product in products:
+
+
+            if product["id"] == cart_item["id"]:
+
+
+                product["stock"] += cart_item["quantity"]
+
+                break
+
+
+
+    save_products(products)
+
+
+    cart.clear()
+
+
+    return redirect(
+        url_for("products_page")
+    )
+
+
+
+
+
+@app.route("/checkout", methods=["GET","POST"])
+def checkout():
+
+    if request.method == "POST":
+
+
+        name = request.form["name"]
+
+        email = request.form["email"]
+
+
+        total = calculate_total(cart)
+
+
+
+        return render_template(
+            "invoice.html",
+            name=name,
+            email=email,
+            cart=cart,
+            total=total
+        )
+
+
+
+    return render_template(
+        "checkout.html"
+    )
+
+
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
