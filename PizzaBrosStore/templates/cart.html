@@ -90,3 +90,82 @@ Remove
 </button>
 
 </a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+
+
+<div class="cart-total">
+
+
+<h2>
+Total: ${{ total }}
+</h2>
+
+
+
+<a href="/checkout">
+
+<button>
+Checkout
+</button>
+
+</a>
+
+
+
+
+<a href="/cancel">
+
+<button class="remove-btn">
+
+Cancel Order
+
+</button>
+
+</a>
+
+
+</div>
+
+
+
+
+{% else %}
+
+
+<h2>
+Your cart is empty
+</h2>
+
+
+<a href="/products">
+
+<button>
+Order Pizza
+</button>
+
+</a>
+
+
+{% endif %}
+
+
+
+</section>
+
+
+</body>
+
+</html>
