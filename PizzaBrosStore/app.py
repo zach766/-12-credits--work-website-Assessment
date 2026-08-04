@@ -70,8 +70,6 @@ def home():
 
 
 
-
-
 @app.route("/products")
 def products_page():
 
@@ -119,8 +117,6 @@ def add_to_cart(product_id):
 
 
 
-
-
                 # If new item add quantity
 
                 if not found:
@@ -165,9 +161,6 @@ def view_cart():
         cart=cart,
         total=total
     )
-
-
-
 
 
 
