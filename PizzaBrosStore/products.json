@@ -4,7 +4,7 @@
         "name": "Pepperoni Pizza",
         "category": "Classic Pizza",
         "price": 18,
-        "stock": 9,
+        "stock": 7,
         "description": "Pepperoni with mozzarella cheese and tomato sauce.",
         "image": "pepperoni.jpg"
     },
@@ -22,7 +22,7 @@
         "name": "Meat Lovers Pizza",
         "category": "Special Pizza",
         "price": 25,
-        "stock": 4,
+        "stock": 1,
         "description": "Loaded with different types of meat.",
         "image": "meat.jpg"
     },
