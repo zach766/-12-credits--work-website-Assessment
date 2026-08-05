@@ -31,7 +31,7 @@
         "name": "Cheese Pizza",
         "category": "Vegetarian",
         "price": 15,
-        "stock": 10,
+        "stock": 9,
         "description": "Classic cheese pizza with tomato sauce.",
         "image": "cheese.jpg"
     }
