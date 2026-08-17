@@ -5,15 +5,13 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>PizzaBrosStore Checkout</title>
 
-
 <link rel="stylesheet"
 href="{{ url_for('static', filename='style.css') }}">
-
 
 </head>
 
@@ -21,14 +19,11 @@ href="{{ url_for('static', filename='style.css') }}">
 <body>
 
 
-
 <header>
-
 
 <h1>
 PizzaBrosStore
 </h1>
-
 
 <nav>
 
@@ -36,91 +31,257 @@ PizzaBrosStore
 Home
 </a>
 
-
 <a href="/products">
 Menu
 </a>
-
 
 <a href="/cart">
 Cart
 </a>
 
-
 </nav>
-
 
 </header>
 
 
 
+<section class="checkout-page">
 
 
+<div class="checkout-container">
 
-<section class="checkout">
 
+<!-- LEFT SIDE -->
+
+<div class="checkout-form">
 
 
 <h2>
-Customer Details
+Checkout
 </h2>
-
-
 
 
 <form method="POST">
 
+
+<h3>
+Order Type
+</h3>
+
+
+<div class="order-type">
+
+
+<label>
+
+<input
+type="radio"
+name="order_type"
+value="delivery"
+checked
+onclick="showAddress()"
+>
+
+Delivery (+ $3.00)
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="order_type"
+value="pickup"
+onclick="hideAddress()"
+>
+
+Pickup (Free)
+
+</label>
+
+</div>
+
+
+
+<h3>
+Customer Details
+</h3>
 
 
 <label>
 Full Name
 </label>
 
-
-
-<input 
+<input
 type="text"
 name="name"
-required>
+placeholder="John Doe"
+required
+>
 
 
+<div id="address-section">
 
+<label>
+Address
+</label>
+
+<input
+type="text"
+name="address"
+placeholder="123 Pizza Street, Auckland"
+>
+
+</div>
 
 
 <label>
-Email
+Phone Number
 </label>
 
-
-
 <input
-type="email"
-name="email"
-required>
+type="tel"
+name="phone"
+placeholder="021 123 4567"
+required
+>
 
 
-
-
-
-
-<button type="submit">
+<button
+type="submit"
+class="place-order-btn">
 
 Place Order
 
 </button>
 
 
-
-
-
 </form>
 
 
+</div>
+
+
+
+<!-- RIGHT SIDE -->
+
+<div class="order-summary">
+
+
+<h2>
+Order Summary
+</h2>
+
+
+{% for item in cart %}
+
+
+<div class="summary-item">
+
+
+<span>
+{{ item.name }} × {{ item.quantity }}
+</span>
+
+
+<span>
+${{ "%.2f"|format(item.price * item.quantity) }}
+</span>
+
+
+</div>
+
+
+{% endfor %}
+
+
+<hr>
+
+
+<div class="summary-row">
+
+<span>
+Subtotal
+</span>
+
+<span>
+${{ "%.2f"|format(subtotal) }}
+</span>
+
+</div>
+
+
+<div class="summary-row">
+
+<span>
+Delivery Fee
+</span>
+
+<span id="delivery-fee">
+$3.00
+</span>
+
+</div>
+
+
+<div class="summary-total">
+
+<span>
+Total
+</span>
+
+<span id="checkout-total">
+${{ "%.2f"|format(subtotal + 3) }}
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
 
 
 </section>
 
 
+
+<script>
+
+function showAddress() {
+
+    document.getElementById("address-section")
+    .style.display = "block";
+
+    document.getElementById("delivery-fee")
+    .innerText = "$3.00";
+
+    let subtotal = {{ subtotal }};
+
+    document.getElementById("checkout-total")
+    .innerText = "$" + (subtotal + 3).toFixed(2);
+
+}
+
+
+function hideAddress() {
+
+    document.getElementById("address-section")
+    .style.display = "none";
+
+    document.getElementById("delivery-fee")
+    .innerText = "$0.00";
+
+    let subtotal = {{ subtotal }};
+
+    document.getElementById("checkout-total")
+    .innerText = "$" + subtotal.toFixed(2);
+
+}
+
+</script>
 
 
 </body>
