@@ -1,211 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-
 
 <meta charset="UTF-8">
 
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-<title>Pizza Invoice</title>
-
-
-
+<title>PizzaBrosStore Invoice</title>
 
 <link rel="stylesheet"
 href="{{ url_for('static', filename='style.css') }}">
 
-
-
 </head>
-
-
 
 
 <body>
 
 
-
-
 <header>
 
-
 <h1>
-
 PizzaBrosStore
-
 </h1>
 
+<nav>
+
+<a href="/">
+Home
+</a>
+
+<a href="/products">
+Menu
+</a>
+
+<a href="/cart">
+Cart
+</a>
+
+</nav>
 
 </header>
 
 
 
+<section class="invoice-page">
+
+
+<h2 class="thank-you">
+Thank You!
+</h2>
+
+
+<p class="invoice-message">
+Your order has been placed successfully.
+<br>
+Here is your invoice.
+</p>
 
 
 
-<section class="checkout">
-
-
-
+<div class="invoice-card">
 
 
 <h2>
-
-Pizza Order Invoice
-
+Invoice
 </h2>
 
 
 
+<div class="invoice-info">
+
 
 <p>
-
-<strong>Customer Name:</strong> {{ name }}
-
+<strong>Order ID:</strong>
+#{{ order_id }}
 </p>
 
 
 <p>
+<strong>Date:</strong>
+{{ date }}
+</p>
 
-<strong>Email:</strong> {{ email }}
 
+</div>
+
+
+
+<p>
+<strong>Customer:</strong>
+{{ name }}
+</p>
+
+
+<p>
+<strong>Order Type:</strong>
+{{ order_type|capitalize }}
+</p>
+
+
+{% if order_type == "delivery" %}
+
+<p>
+<strong>Address:</strong>
+{{ address }}
+</p>
+
+{% endif %}
+
+
+<p>
+<strong>Phone:</strong>
+{{ phone }}
 </p>
 
 
 
-
-<hr>
-
+<table>
 
 
+<thead>
 
-<h3>
+<tr>
 
-Items Ordered
+<th>
+Pizza
+</th>
 
-</h3>
+<th>
+Quantity
+</th>
+
+<th>
+Price
+</th>
+
+<th>
+Subtotal
+</th>
+
+</tr>
+
+</thead>
 
 
 
+<tbody>
 
 
 {% for item in cart %}
 
 
+<tr>
 
-
-
-<div class="cart-item">
-
-
-
-
-
-<div>
-
-
-
-
-<h3>
-
+<td>
 {{ item.name }}
+</td>
 
-</h3>
+<td>
+{{ item.quantity }}
+</td>
 
+<td>
+${{ "%.2f"|format(item.price) }}
+</td>
 
+<td>
+${{ "%.2f"|format(item.price * item.quantity) }}
+</td>
 
-
-<p>
-
-{{ item.category }}
-
-</p>
-
-
-
-
-
-<p>
-
-${{ item.price }}
-
-</p>
-
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
+</tr>
 
 
 {% endfor %}
 
 
+</tbody>
+
+
+</table>
 
 
 
-<hr>
-
-
-
-
-
-<h2>
-
-Total Paid: ${{ total }}
-
-</h2>
-
-
-
-
-<br>
-
-
+<div class="invoice-totals">
 
 
 <p>
 
-Thank you for ordering from PizzaBrosStore!
+<span>
+Subtotal
+</span>
+
+<strong>
+${{ "%.2f"|format(subtotal) }}
+</strong>
 
 </p>
 
 
+<p>
+
+<span>
+Delivery Fee
+</span>
+
+<strong>
+${{ "%.2f"|format(delivery_fee) }}
+</strong>
+
+</p>
+
+
+<p class="final-total">
+
+<span>
+Total
+</span>
+
+<strong>
+${{ "%.2f"|format(total) }}
+</strong>
+
+</p>
+
+
+</div>
+
+
+
+<p class="invoice-thanks">
+We hope you enjoyed your meal!
+</p>
 
 
 <a href="/">
 
-
 <button>
-
-Return Home
-
+Back to Home
 </button>
-
 
 </a>
 
 
-
+</div>
 
 
 </section>
-
-
-
 
 
 </body>
