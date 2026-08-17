@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-<title>
-PizzaBros Cart
-</title>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PizzaBros Cart</title>
 
 <link rel="stylesheet"
 href="{{ url_for('static', filename='style.css') }}">
@@ -22,14 +24,19 @@ href="{{ url_for('static', filename='style.css') }}">
 PizzaBrosStore
 </h1>
 
-
 <nav>
 
-<a href="/">Home</a>
+<a href="/">
+Home
+</a>
 
-<a href="/products">Menu</a>
+<a href="/products">
+Menu
+</a>
 
-<a href="/cart">Cart</a>
+<a href="/cart">
+Cart
+</a>
 
 </nav>
 
@@ -37,10 +44,10 @@ PizzaBrosStore
 
 
 
-<section class="cart-section">
+<section class="cart-page">
 
 
-<h2>
+<h2 class="section-title">
 Your Order
 </h2>
 
@@ -49,39 +56,99 @@ Your Order
 {% if cart %}
 
 
+<div class="cart-table">
+
+
+<div class="cart-header">
+
+<span>Pizza</span>
+<span>Price</span>
+<span>Quantity</span>
+<span>Subtotal</span>
+<span>Action</span>
+
+</div>
+
+
 
 {% for item in cart %}
 
 
+<div class="cart-row">
 
-<div class="cart-item">
+
+<div class="pizza-info">
+
+
+<img
+src="{{ url_for('static', filename='images/' + item.image) }}"
+alt="{{ item.name }}"
+>
 
 
 <div>
-
 
 <h3>
 {{ item.name }}
 </h3>
 
-
-
 <p>
-Price: ${{ item.price }}
+{{ item.category }}
 </p>
 
+</div>
 
-<p>
-Quantity: {{ item.quantity }}
-</p>
-
-
-<p>
-Subtotal:
-${{ item.price * item.quantity }}
-</p>
+</div>
 
 
+
+<div>
+
+${{ "%.2f"|format(item.price) }}
+
+</div>
+
+
+
+<div class="quantity-controls">
+
+
+<a href="/update/{{ item.id }}/decrease">
+
+<button class="quantity-btn">
+−
+</button>
+
+</a>
+
+
+<span>
+{{ item.quantity }}
+</span>
+
+
+<a href="/update/{{ item.id }}/increase">
+
+<button class="quantity-btn">
++
+</button>
+
+</a>
+
+
+</div>
+
+
+
+<div>
+
+${{ "%.2f"|format(item.price * item.quantity) }}
+
+</div>
+
+
+
+<div>
 
 <a href="/remove/{{ loop.index0 }}">
 
@@ -91,64 +158,71 @@ Remove
 
 </a>
 
-
-
 </div>
 
 
 </div>
-
 
 
 {% endfor %}
 
 
+</div>
 
 
 
-<div class="cart-total">
+<div class="cart-bottom">
 
+
+<div class="cart-total-new">
+
+<p>
+Total:
+</p>
 
 <h2>
-Total: ${{ total }}
+${{ "%.2f"|format(total) }}
 </h2>
 
+</div>
+
+
+<div class="cart-actions">
+
+
+<a href="/products">
+
+<button class="continue-btn">
+← Continue Shopping
+</button>
+
+</a>
 
 
 <a href="/checkout">
 
-<button>
+<button class="checkout-btn">
 Checkout
 </button>
 
 </a>
 
 
-
-
-<a href="/cancel">
-
-<button class="remove-btn">
-
-Cancel Order
-
-</button>
-
-</a>
+</div>
 
 
 </div>
 
 
 
-
 {% else %}
 
+
+<div class="empty-cart">
 
 <h2>
 Your cart is empty
 </h2>
-
 
 <a href="/products">
 
@@ -158,9 +232,10 @@ Order Pizza
 
 </a>
 
+</div>
+
 
 {% endif %}
-
 
 
 </section>
