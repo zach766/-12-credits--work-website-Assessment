@@ -22,7 +22,7 @@
         "name": "Meat Lovers Pizza",
         "category": "Special Pizza",
         "price": 25,
-        "stock": 1,
+        "stock": 0,
         "description": "Loaded with different types of meat.",
         "image": "meat.jpg"
     },
