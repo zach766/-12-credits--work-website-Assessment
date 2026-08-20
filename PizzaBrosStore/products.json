@@ -13,7 +13,7 @@
         "name": "Hawaiian Pizza",
         "category": "Classic Pizza",
         "price": 20,
-        "stock": 19,
+        "stock": 17,
         "description": "Ham and pineapple with melted cheese.",
         "image": "hawaiian.jpg"
     },
