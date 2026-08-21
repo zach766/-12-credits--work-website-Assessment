@@ -100,3 +100,89 @@ Featured Pizzas
 <div class="product-card">
 
 
+
+<h3>
+
+{{ product.name }}
+
+</h3>
+
+
+<p>
+
+{{ product.category }}
+
+</p>
+
+
+<p>
+
+{{ product.description }}
+
+</p>
+
+
+<h2>
+
+${{ product.price }}
+
+</h2>
+
+
+<a href="/add/{{ product.id }}">
+
+<button>
+
+Add To Cart
+
+</button>
+
+</a>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     ABOUT PIZZABROS
+========================= -->
+
+<section class="about-section">
+
+
+<div class="about-content">
+
+
+<p class="about-label">
+
+ABOUT PIZZABROS
+
+</p>
+
+
+<h2>
+
+Pizza Made With
+<br>
+Passion
+
+</h2>
+
+
+<p>
+
+At PizzaBrosStore, we believe that great pizza
+starts with great ingredients. Every pizza is
+prepared with fresh toppings, delicious cheese
+and plenty of care.
+
+</p>
