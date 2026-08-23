@@ -6,7 +6,7 @@
         "price": 18,
         "stock": 4,
         "description": "Pepperoni with mozzarella cheese and tomato sauce.",
-        "image": "pepperoni.jpg"
+        "image": "pepperoni.png"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "price": 20,
         "stock": 17,
         "description": "Ham and pineapple with melted cheese.",
-        "image": "hawaiian.jpg"
+        "image": "hawaiian.png"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "price": 25,
         "stock": 18,
         "description": "Loaded with different types of meat.",
-        "image": "meat.jpg"
+        "image": "meat.png"
     },
     {
         "id": 4,
@@ -33,6 +33,6 @@
         "price": 15,
         "stock": 9,
         "description": "Classic cheese pizza with tomato sauce.",
-        "image": "cheese.jpg"
+        "image": "cheese.png"
     }
 ]
