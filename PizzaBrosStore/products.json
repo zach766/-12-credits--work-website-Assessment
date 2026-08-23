@@ -51,7 +51,7 @@
         "price": 21,
         "stock": 10,
         "description": "Capsicum, onion, mushrooms, olives and cheese.",
-        "image": "veggie.png"
+        "image": "VeggieSupremePizza.png"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "price": 17,
         "stock": 12,
         "description": "Fresh tomato, mozzarella, basil and tomato sauce.",
-        "image": "margherita.png"
+        "image": "MargheritaPizza.png"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "price": 26,
         "stock": 6,
         "description": "Pepperoni, ham, mushrooms, capsicum, onion and olives.",
-        "image": "supreme.png"
+        "image": "SupremePizza.png"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "price": 24,
         "stock": 5,
         "description": "Seasoned beef, jalapenos, onion and mozzarella cheese.",
-        "image": "spicy-beef.png"
+        "image": "SpicyBeefPizza.png"
     },
     {
         "id": 10,
@@ -87,7 +87,7 @@
         "price": 19,
         "stock": 11,
         "description": "Fresh mushrooms, mozzarella and tomato sauce.",
-        "image": "mushroom.png"
+        "image": "MushroomPizza.png"
     },
     {
         "id": 11,
@@ -96,7 +96,7 @@
         "price": 22,
         "stock": 8,
         "description": "Chicken, garlic sauce, mozzarella and fresh herbs.",
-        "image": "garlic-chicken.png"
+        "image": "GarlicChickenPizza.png"
     },
     {
         "id": 12,
@@ -105,6 +105,6 @@
         "price": 23,
         "stock": 7,
         "description": "Crispy bacon, mozzarella cheese and tomato sauce.",
-        "image": "bacon-cheese.png"
+        "image": "BaconCheesePizza.png"
     }
 ]
