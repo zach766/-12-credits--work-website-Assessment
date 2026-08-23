@@ -34,5 +34,78 @@
         "stock": 9,
         "description": "Classic cheese pizza with tomato sauce.",
         "image": "cheese.png"
+    },
+    {
+        "id": 5,
+        "name": "BBQ Chicken Pizza",
+        "category": "Special Pizza",
+        "price": 23,
+        "stock": 7,
+        "description": "Grilled chicken, mozzarella and BBQ sauce.",
+        "image": "bbq-chicken.png"
+    },
+    {
+        "id": 6,
+        "name": "Veggie Supreme Pizza",
+        "category": "Vegetarian",
+        "price": 21,
+        "stock": 10,
+        "description": "Capsicum, onion, mushrooms, olives and cheese.",
+        "image": "veggie.png"
+    },
+    {
+        "id": 7,
+        "name": "Margherita Pizza",
+        "category": "Classic Pizza",
+        "price": 17,
+        "stock": 12,
+        "description": "Fresh tomato, mozzarella, basil and tomato sauce.",
+        "image": "margherita.png"
+    },
+    {
+        "id": 8,
+        "name": "Supreme Pizza",
+        "category": "Special Pizza",
+        "price": 26,
+        "stock": 6,
+        "description": "Pepperoni, ham, mushrooms, capsicum, onion and olives.",
+        "image": "supreme.png"
+    },
+    {
+        "id": 9,
+        "name": "Spicy Beef Pizza",
+        "category": "Special Pizza",
+        "price": 24,
+        "stock": 5,
+        "description": "Seasoned beef, jalapenos, onion and mozzarella cheese.",
+        "image": "spicy-beef.png"
+    },
+    {
+        "id": 10,
+        "name": "Mushroom Pizza",
+        "category": "Vegetarian",
+        "price": 19,
+        "stock": 11,
+        "description": "Fresh mushrooms, mozzarella and tomato sauce.",
+        "image": "mushroom.png"
+    },
+    {
+        "id": 11,
+        "name": "Garlic Chicken Pizza",
+        "category": "Chicken Pizza",
+        "price": 22,
+        "stock": 8,
+        "description": "Chicken, garlic sauce, mozzarella and fresh herbs.",
+        "image": "garlic-chicken.png"
+    },
+    {
+        "id": 12,
+        "name": "Bacon & Cheese Pizza",
+        "category": "Classic Pizza",
+        "price": 23,
+        "stock": 7,
+        "description": "Crispy bacon, mozzarella cheese and tomato sauce.",
+        "image": "bacon-cheese.png"
     }
 ]
+
