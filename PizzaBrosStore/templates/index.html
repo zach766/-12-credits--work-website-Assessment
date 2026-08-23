@@ -90,61 +90,48 @@ Featured Pizzas
 
 </h2>
 
-
 <div class="product-container">
-
 
 {% for product in products %}
 
-
 <div class="product-card">
 
+    <div class="product-image">
+        <img
+            src="{{ url_for('static', filename='images/' + product.image) }}"
+            alt="{{ product.name }}"
+        >
+    </div>
 
+    <div class="product-info">
 
-<h3>
+        <p class="product-category">
+            {{ product.category }}
+        </p>
 
-{{ product.name }}
+        <h3>
+            {{ product.name }}
+        </h3>
 
-</h3>
+        <p class="product-description">
+            {{ product.description }}
+        </p>
 
+        <h2>
+            ${{ product.price }}
+        </h2>
 
-<p>
+        <a href="/add/{{ product.id }}">
+            <button>
+                Add To Cart
+            </button>
+        </a>
 
-{{ product.category }}
-
-</p>
-
-
-<p>
-
-{{ product.description }}
-
-</p>
-
-
-<h2>
-
-${{ product.price }}
-
-</h2>
-
-
-<a href="/add/{{ product.id }}">
-
-<button>
-
-Add To Cart
-
-</button>
-
-</a>
-
+    </div>
 
 </div>
 
-
 {% endfor %}
-
 
 </div>
 
