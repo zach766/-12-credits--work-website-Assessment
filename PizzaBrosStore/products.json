@@ -42,7 +42,7 @@
         "price": 23,
         "stock": 7,
         "description": "Grilled chicken, mozzarella and BBQ sauce.",
-        "image": "bbq-chicken.png"
+        "image": "BBQChickenPizza.png"
     },
     {
         "id": 6,
@@ -108,4 +108,3 @@
         "image": "bacon-cheese.png"
     }
 ]
-
