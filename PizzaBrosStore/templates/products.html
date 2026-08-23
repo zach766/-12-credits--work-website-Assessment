@@ -3,214 +3,204 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pizza Menu</title>
+    <title>Pizza Menu</title>
 
-
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
-<img src="{{ url_for('static', filename='images/cheese.png' ) }}">
-<img src="{{ url_for('static', filename='images/pepperoni.png' ) }}">
-<img src="{{ url_for('static', filename='images/hawaiian.png' ) }}">
-<img src="{{ url_for('static', filename='images/meatlovers.png' ) }}">
-<img src="{{ url_for('static', filename='images/MargheritaPizza.png' ) }}">
-<img src="{{ url_for('static', filename='images/SupremePizza.png' ) }}">
-<img src="{{ url_for('static', filename='images/BBQChickenPizza.png' ) }}">
-<img src="{{ url_for('static', filename='images/VeggieSupremePizza.png' ) }}">
-
-
 
 <body>
 
-
 <header>
 
-<h1>
-PizzaBrosStore
-</h1>
+    <h1>
+        PizzaBrosStore
+    </h1>
 
+    <nav>
 
-<nav>
+        <a href="/">
+            Home
+        </a>
 
-<a href="/">
-Home
-</a>
+        <a href="/products">
+            Menu
+        </a>
 
+        <a href="/cart">
+            Cart
+        </a>
 
-<a href="/products">
-Menu
-</a>
-
-
-<a href="/cart">
-Cart
-</a>
-
-
-</nav>
+    </nav>
 
 </header>
 
 
+<!-- =========================
+     MENU
+========================= -->
 
+<section class="menu-page">
 
-<section>
+    <div class="menu-heading">
 
+        <p class="menu-label">
+            PIZZABROS
+        </p>
 
+        <h2 class="section-title">
+            Our Pizza Menu
+        </h2>
 
-<h2 class="section-title">
+        <p class="menu-description">
+            Fresh ingredients, delicious toppings and pizzas
+            made fresh for every order.
+        </p>
 
-Our Pizza Menu
+    </div>
 
-</h2>
 
+    <div class="product-container">
 
+        {% for product in products %}
 
+        <div class="product-card">
 
-<div class="product-container">
+            <!-- PIZZA IMAGE -->
 
+            <div class="product-image">
 
+                <img
+                    src="{{ url_for('static', filename='images/' + product.image) }}"
+                    alt="{{ product.name }}"
+                >
 
-{% for product in products %}
+            </div>
 
 
+            <!-- PRODUCT INFORMATION -->
 
-<div class="product-card">
+            <div class="product-info">
 
+                <p class="product-category">
+                    {{ product.category }}
+                </p>
 
+                <h3>
+                    {{ product.name }}
+                </h3>
 
-<h3>
+                <p class="product-description">
+                    {{ product.description }}
+                </p>
 
-{{ product.name }}
+                <div class="product-bottom">
 
-</h3>
+                    <h2>
+                        ${{ product.price }}
+                    </h2>
 
+                    <p class="stock">
+                        {{ product.stock }} available
+                    </p>
 
+                </div>
 
-<p>
 
-Category: {{ product.category }}
+                <!-- BUTTONS -->
 
-</p>
+                <div class="product-buttons">
 
+                    <button
+                        onclick="showDetails('{{ product.id }}')">
+                        View Details
+                    </button>
 
-<p>
-Price: ${{ product.price }}
-</p>
 
-<p>
-Stock Available: {{ product.stock }}
-</p>
+                    {% if product.stock > 0 %}
 
+                    <a href="/add/{{ product.id }}">
 
-<button onclick="showDetails('{{ product.id }}')">
+                        <button class="add-button">
+                            Add To Cart
+                        </button>
 
-View Details
+                    </a>
 
-</button>
+                    {% else %}
 
+                    <button disabled>
+                        Out Of Stock
+                    </button>
 
+                    {% endif %}
 
+                </div>
 
-{% if product.stock > 0 %}
 
-<a href="/add/{{ product.id }}">
+                <!-- DETAILS -->
 
-<button>
-Add To Cart
-</button>
+                <div
+                    id="details-{{ product.id }}"
+                    class="product-details">
 
-</a>
+                    <p>
+                        {{ product.description }}
+                    </p>
 
-{% else %}
+                    <button
+                        onclick="hideDetails('{{ product.id }}')">
+                        Close
+                    </button>
 
-<button disabled>
-Out Of Stock
-</button>
+                </div>
 
-{% endif %}
+            </div>
 
+        </div>
 
+        {% endfor %}
 
-
-<div id="details-{{ product.id }}" class="product-details">
-
-
-
-<p>
-
-{{ product.description }}
-
-</p>
-
-
-
-<button onclick="hideDetails('{{ product.id }}')">
-
-Close
-
-</button>
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-{% endfor %}
-
-
-
-
-</div>
-
-
+    </div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
 
+<footer>
 
+    <p>
+        PizzaBrosStore © 2026
+    </p>
+
+</footer>
 
 
 <script>
 
-
 function showDetails(id) {
 
-
-document.getElementById("details-" + id)
-.style.display = "block";
-
+    document.getElementById("details-" + id)
+        .style.display = "block";
 
 }
-
-
 
 function hideDetails(id) {
 
-
-document.getElementById("details-" + id)
-.style.display = "none";
-
+    document.getElementById("details-" + id)
+        .style.display = "none";
 
 }
 
-
 </script>
-
-
-
 
 </body>
 
