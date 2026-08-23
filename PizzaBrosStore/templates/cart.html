@@ -10,7 +10,7 @@
 <title>PizzaBros Cart</title>
 
 <link rel="stylesheet"
-href="{{ url_for('static', filename='style.css') }}">
+          href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
@@ -218,21 +218,120 @@ Checkout
 {% else %}
 
 
+<!-- =========================
+     EMPTY CART
+========================= -->
+
 <div class="empty-cart">
 
+<p class="empty-cart-label">
+PIZZABROS
+</p>
+
 <h2>
-Your cart is empty
+Your Cart Is Empty
 </h2>
+
+<p class="empty-cart-text">
+Ready to order something delicious?
+Explore our menu and choose your favourite pizza.
+</p>
 
 <a href="/products">
 
-<button>
-Order Pizza
+<button class="empty-cart-button">
+Browse Menu
 </button>
 
 </a>
 
 </div>
+
+
+
+<!-- =========================
+     PIZZABROS MESSAGE
+========================= -->
+
+<div class="cart-message-section">
+
+<p class="cart-message-label">
+PIZZABROS
+</p>
+
+<h2>
+Good Pizza Starts Here
+</h2>
+
+<p>
+Fresh ingredients, delicious toppings,
+and pizza made just for you.
+</p>
+
+</div>
+
+
+
+<!-- =========================
+     WHY PIZZABROS
+========================= -->
+
+<div class="cart-benefits">
+
+<h2>
+Why PizzaBros?
+</h2>
+
+
+<div class="benefits-container">
+
+
+<div class="benefit-card">
+
+<h3>
+Fresh Ingredients
+</h3>
+
+<p>
+Quality ingredients and delicious toppings
+in every pizza.
+</p>
+
+</div>
+
+
+<div class="benefit-card">
+
+<h3>
+Made To Order
+</h3>
+
+<p>
+Every pizza is prepared fresh when
+you place your order.
+</p>
+
+</div>
+
+
+<div class="benefit-card">
+
+<h3>
+Pickup & Delivery
+</h3>
+
+<p>
+Choose pickup or delivery when you
+reach checkout.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
 
 
 {% endif %}
