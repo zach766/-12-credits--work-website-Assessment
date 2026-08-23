@@ -22,7 +22,7 @@
         "name": "Meat Lovers Pizza",
         "category": "Special Pizza",
         "price": 25,
-        "stock": 18,
+        "stock": 15,
         "description": "Loaded with different types of meat.",
         "image": "meatlovers.png"
     },
@@ -105,6 +105,6 @@
         "price": 23,
         "stock": 7,
         "description": "Crispy bacon, mozzarella cheese and tomato sauce.",
-        "image": "BaconCheesePizza.png"
+        "image": "Bacon&CheesePizza.png"
     }
 ]
