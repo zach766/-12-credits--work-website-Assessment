@@ -95,3 +95,51 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    padding: 120px 20px 80px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.48)
+        ),
+        url("../images/asd.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.hero h2 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
