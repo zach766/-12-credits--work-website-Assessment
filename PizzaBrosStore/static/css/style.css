@@ -143,3 +143,64 @@ nav a:hover::after {
 
     margin-bottom: 25px;
 }
+
+
+.hero p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 600px;
+
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.hero a {
+    position: relative;
+    z-index: 2;
+}
+
+.hero button {
+    border: 1px solid white;
+    background: white;
+    color: #222;
+
+    padding: 15px 34px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background: transparent;
+    color: white;
+}
+
+
+/* Hide the separate images that currently sit above the hero */
+
+body > img {
+    display: none;
+}
+
+
+/* ================================
+   SECTION TITLES
+================================ */
+
+.section-title {
+    text-align: center;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 46px;
+    font-weight: 500;
+
+    margin-bottom: 55px;
+}
