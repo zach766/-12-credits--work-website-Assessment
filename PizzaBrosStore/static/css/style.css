@@ -204,3 +204,79 @@ body > img {
 
     margin-bottom: 55px;
 }
+
+section:not(.hero) {
+    padding: 100px 7%;
+}
+
+.product-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #fff;
+
+    padding: 0 0 30px;
+
+    border: 1px solid #e8e8e8;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.10);
+}
+
+.product-card h3 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    margin: 25px 20px 8px;
+}
+
+.product-card p {
+    color: #777;
+    font-size: 14px;
+
+    margin: 5px 20px;
+}
+
+.product-card h2 {
+    font-size: 22px;
+    font-weight: 600;
+
+    margin: 18px 0;
+}
+
+.product-card button {
+    background: #222;
+    color: white;
+
+    border: 1px solid #222;
+
+    padding: 12px 24px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
