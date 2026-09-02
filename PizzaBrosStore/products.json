@@ -13,7 +13,7 @@
         "name": "Hawaiian Pizza",
         "category": "Classic Pizza",
         "price": 20,
-        "stock": 16,
+        "stock": 14,
         "description": "Ham and pineapple with melted cheese.",
         "image": "hawaiian.png"
     },
@@ -22,7 +22,7 @@
         "name": "Meat Lovers Pizza",
         "category": "Special Pizza",
         "price": 25,
-        "stock": 15,
+        "stock": 14,
         "description": "Loaded with different types of meat.",
         "image": "meatlovers.png"
     },
