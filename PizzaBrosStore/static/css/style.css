@@ -428,3 +428,126 @@ section:not(.hero) {
 
     line-height: 1.7;
 }
+
+.contact-name {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 22px !important;
+
+    color: #222 !important;
+
+    margin-bottom: 15px !important;
+}
+
+
+/* ================================
+   ACCOLADES
+================================ */
+
+.award-card {
+    max-width: 230px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+
+    border: 1px solid #ddd;
+}
+
+.award-star {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.award-title {
+    font-size: 11px !important;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #888 !important;
+}
+
+.award-card h3 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 28px;
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin: 10px 0 20px;
+}
+
+.award-line {
+    width: 50px;
+    height: 1px;
+
+    background: #222;
+
+    margin: 15px auto;
+}
+
+.award-year {
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #1d1d1d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer p {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.7;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 22px 5%;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .restaurant-info {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
