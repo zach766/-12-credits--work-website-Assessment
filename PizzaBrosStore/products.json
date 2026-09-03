@@ -4,7 +4,7 @@
         "name": "Pepperoni Pizza",
         "category": "Classic Pizza",
         "price": 18,
-        "stock": 4,
+        "stock": 3,
         "description": "Pepperoni with mozzarella cheese and tomato sauce.",
         "image": "pepperoni.png"
     },

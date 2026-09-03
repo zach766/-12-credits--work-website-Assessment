@@ -358,3 +358,73 @@ section:not(.hero) {
 
     transition: all 0.3s ease;
 }
+
+
+.about-content button:hover {
+    background: transparent;
+    color: #222;
+}
+
+
+/* ================================
+   HOURS / CONTACT / ACCOLADES
+================================ */
+
+.restaurant-info {
+    background: white;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 70px;
+
+    max-width: 1300px;
+    margin: auto;
+}
+
+.info-column {
+    text-align: center;
+}
+
+.info-column > h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 32px;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.info-column p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin: 7px 0;
+}
+
+.info-column strong {
+    color: #222;
+}
+
+.info-subtitle {
+    font-size: 11px !important;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #999 !important;
+
+    margin-bottom: 18px !important;
+}
+
+.info-note {
+    max-width: 300px;
+
+    margin: 25px auto 0 !important;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
