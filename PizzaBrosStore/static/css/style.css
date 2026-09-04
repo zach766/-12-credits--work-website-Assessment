@@ -747,3 +747,157 @@ footer p {
     font-size: 13px;
     line-height: 1.6;
 }
+
+/* ================================
+   PRICE / STOCK
+================================ */
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 18px 0;
+}
+
+.menu-page .product-bottom h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.stock {
+    margin: 0 !important;
+    font-size: 11px !important;
+    color: #999 !important;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.product-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.product-buttons button {
+    flex: 1;
+    padding: 11px 10px;
+    font-size: 10px;
+}
+
+.product-buttons .add-button {
+    background: #222;
+    color: white;
+}
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.menu-page .product-details {
+    display: none;
+
+    margin-top: 15px;
+    padding: 15px;
+
+    background: #f5f3ef;
+    border: 1px solid #e5e2dc;
+
+    text-align: center;
+}
+
+.menu-page .product-details p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.menu-page .product-details button {
+    background: white;
+    color: #222;
+}
+
+
+/* ================================
+   MENU HEADER
+================================ */
+
+body:has(.menu-page) header {
+    position: relative;
+    background: #1d1d1d;
+}
+
+
+/* ================================
+   MENU MOBILE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .menu-page .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .menu-page {
+        padding-top: 40px !important;
+    }
+
+    .menu-page .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-page .product-image {
+        height: 260px;
+    }
+
+    .product-buttons {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================
+   CART / CHECKOUT / INVOICE
+========================================= */
+
+/* ---------- CART ---------- */
+
+.cart-page {
+    padding-top: 60px !important;
+    min-height: 80vh;
+    background: #f8f7f4;
+}
+
+.cart-table {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #e5e2dc;
+}
+
+.cart-header,
+.cart-row {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1.3fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+}
+
+.cart-header {
+    background: #1d1d1d;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
