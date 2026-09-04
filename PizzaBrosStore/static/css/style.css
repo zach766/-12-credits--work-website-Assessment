@@ -551,3 +551,103 @@ footer p {
         gap: 50px;
     }
 }
+
+@media (max-width: 650px) {
+
+    header {
+        position: absolute;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 12px 20px;
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    section:not(.hero) {
+        padding: 70px 6%;
+    }
+
+    .section-title {
+        font-size: 38px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+    }
+}
+
+
+/* ================================
+   FEATURED PIZZA IMAGES
+================================ */
+
+.product-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: #f5f3ef;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 0 10px 25px;
+}
+
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 10px !important;
+    font-weight: 700;
+    color: #999 !important;
+    margin-top: 20px !important;
+}
+
+.product-description {
+    min-height: 45px;
+}
+
+
+/* ================================
+   MENU PAGE
+================================ */
+
+.menu-page {
+    padding-top: 60px !important;
+    background: #ffffff;
+}
