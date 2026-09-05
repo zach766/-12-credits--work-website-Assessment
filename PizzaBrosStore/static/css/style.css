@@ -1104,3 +1104,116 @@ body:has(.menu-page) header {
     letter-spacing: 1.5px;
     margin: 25px 0 15px;
 }
+
+
+/* Order type */
+
+.order-type {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.order-type label {
+    font-size: 14px;
+    color: #555;
+}
+
+.order-type input {
+    margin-right: 7px;
+}
+
+
+/* Form */
+
+.checkout-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="tel"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    font-family: inherit;
+    outline: none;
+}
+
+.checkout-form input:focus {
+    border-color: #222;
+    background: white;
+}
+
+.place-order-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+
+    border: 1px solid #222;
+    background: #222;
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.place-order-btn:hover {
+    background: white;
+    color: #222;
+}
+
+
+/* Order summary */
+
+.summary-item,
+.summary-row,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.summary-item {
+    padding: 12px 0;
+    color: #666;
+    font-size: 13px;
+}
+
+.order-summary hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.summary-row {
+    padding: 8px 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.summary-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+}
+
+
+/* =========================================
+   INVOICE
+========================================= */
+
+.invoice-page {
+    padding-top: 60px !important;
+    min-height: 80vh;
+    background: #f8f7f4;
+    text-align: center;
+}
