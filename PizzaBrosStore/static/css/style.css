@@ -1217,3 +1217,121 @@ body:has(.menu-page) header {
     background: #f8f7f4;
     text-align: center;
 }
+
+
+.thank-you {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.invoice-message {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.invoice-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px;
+    background: white;
+    border: 1px solid #e5e2dc;
+    text-align: left;
+}
+
+.invoice-card > h2 {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.invoice-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.invoice-card > p {
+    font-size: 14px;
+    color: #555;
+    margin: 8px 0;
+}
+
+
+/* Invoice table */
+
+.invoice-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.invoice-card th {
+    background: #1d1d1d;
+    color: white;
+    padding: 13px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.invoice-card td {
+    padding: 15px 13px;
+    border-bottom: 1px solid #e5e2dc;
+    font-size: 13px;
+}
+
+
+/* Invoice totals */
+
+.invoice-totals {
+    max-width: 300px;
+    margin: 30px 0 0 auto;
+}
+
+.invoice-totals p {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: #666;
+}
+
+.invoice-totals .final-total {
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    margin-top: 10px;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    color: #222;
+}
+
+.invoice-thanks {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    margin-top: 35px !important;
+}
+
+.invoice-card > a {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.invoice-card > a button {
+    padding: 14px 28px;
+    background: #222;
+    color: white;
+    border: 1px solid #222;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
