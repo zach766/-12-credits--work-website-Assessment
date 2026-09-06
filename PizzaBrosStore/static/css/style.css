@@ -1335,3 +1335,162 @@ body:has(.menu-page) header {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+.invoice-card > a button:hover {
+    background: white;
+    color: #222;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .cart-header {
+        display: none;
+    }
+
+    .cart-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .cart-bottom {
+        flex-direction: column;
+        gap: 25px;
+        align-items: stretch;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .invoice-card {
+        padding: 25px 15px;
+        overflow-x: auto;
+    }
+
+    .invoice-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .checkout-form,
+    .order-summary {
+        padding: 25px 20px;
+    }
+
+    .order-type {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .thank-you {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================
+   EMPTY CART
+========================================= */
+
+.empty-cart {
+    max-width: 750px;
+    margin: 20px auto 80px;
+    padding: 80px 40px;
+
+    background: #f5f3ef;
+
+    text-align: center;
+
+    border: 1px solid #e5e2dc;
+}
+
+.empty-cart-label {
+    font-size: 11px !important;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #888 !important;
+
+    margin-bottom: 15px !important;
+}
+
+.empty-cart h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.empty-cart-text {
+    max-width: 500px;
+
+    margin: 0 auto 30px;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.empty-cart-button {
+    background: #222;
+
+    color: white;
+
+    border: 1px solid #222;
+
+    padding: 15px 32px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.empty-cart-button:hover {
+    background: white;
+
+    color: #222;
+}
+
+
+/* =========================================
+   PIZZABROS MESSAGE
+========================================= */
+
+.cart-message-section {
+    max-width: 900px;
+
+    margin: 0 auto 90px;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
