@@ -1494,3 +1494,128 @@ body:has(.menu-page) header {
 
     padding: 30px 20px;
 }
+
+.cart-message-label {
+    font-size: 11px !important;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #888 !important;
+
+    margin-bottom: 15px !important;
+}
+
+.cart-message-section h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(40px, 5vw, 60px);
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.cart-message-section p:last-child {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   WHY PIZZABROS
+========================================= */
+
+.cart-benefits {
+    max-width: 1200px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.cart-benefits > h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    margin-bottom: 40px;
+}
+
+.benefits-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.benefit-card {
+    padding: 35px 25px;
+
+    border: 1px solid #e5e2dc;
+
+    background: white;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-card h3 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   EMPTY CART MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .empty-cart {
+        padding: 60px 25px;
+
+        margin-bottom: 60px;
+    }
+
+    .empty-cart h2 {
+        font-size: 40px;
+    }
+
+    .cart-message-section {
+        margin-bottom: 60px;
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+} 
